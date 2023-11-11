@@ -28,12 +28,20 @@ function playRound(playerChoice, computerChoice){
         return 'game draw';
     }
 
-    
+    else if(playerChoice=='scissor' && computerChoice=='rock'){
+        return 'You Lose! '+computerChoice+' beats '+playerChoice;
+    }
+    else if(playerChoice=='scissor' && computerChoice=='paper'){
+        return 'you won! '+playerChoice+' beats '+computerChoice;
+    }
+    else if(playerChoice=='scissor' && computerChoice=='scissor'){
+        return 'game draw';
+    }
 }
 
 
 
-const playerChoice = 'rock';
+const playerChoice = 'scissor';
 const computerChoice = getComputerChoice();
 
 console.log(playRound(playerChoice, computerChoice));
