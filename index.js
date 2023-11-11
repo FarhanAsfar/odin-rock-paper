@@ -9,10 +9,10 @@ function getComputerChoice(){
 
 function playRound(playerChoice, computerChoice){
     if(playerChoice=='rock' && computerChoice=='paper'){
-        return 'you lose';
+        return 'You Lose! '+computerChoice+' beats '+playerChoice;
     }
     else if(playerChoice=='rock' && computerChoice=='scissor'){
-        return 'you won';
+        return 'you won! '+playerChoice+' beats '+computerChoice;
     }
     else if(playerChoice=='rock' && computerChoice=='rock'){
         return 'game draw';
