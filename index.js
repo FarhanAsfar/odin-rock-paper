@@ -17,6 +17,18 @@ function playRound(playerChoice, computerChoice){
     else if(playerChoice=='rock' && computerChoice=='rock'){
         return 'game draw';
     }
+
+    else if(playerChoice=='paper' && computerChoice=='rock'){
+        return 'you won! '+playerChoice+' beats '+computerChoice;
+    }
+    else if(playerChoice=='paper' && computerChoice=='scissor'){
+        return 'You Lose! '+computerChoice+' beats '+playerChoice;
+    }
+    else if(playerChoice=='paper' && computerChoice=='paper'){
+        return 'game draw';
+    }
+
+    
 }
 
 
