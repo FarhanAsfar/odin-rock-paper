@@ -8,34 +8,19 @@ function getComputerChoice(){
 }
 
 function playRound(playerChoice, computerChoice){
-    if(playerChoice=='rock' && computerChoice=='paper'){
-        return 'You Lose! '+computerChoice+' beats '+playerChoice;
+    
+    if(playerChoice == computerChoice){
+        return 'Game Drawn';
     }
-    else if(playerChoice=='rock' && computerChoice=='scissor'){
-        return 'you won! '+playerChoice+' beats '+computerChoice;
-    }
-    else if(playerChoice=='rock' && computerChoice=='rock'){
-        return 'game draw';
-    }
-
-    else if(playerChoice=='paper' && computerChoice=='rock'){
-        return 'you won! '+playerChoice+' beats '+computerChoice;
-    }
-    else if(playerChoice=='paper' && computerChoice=='scissor'){
-        return 'You Lose! '+computerChoice+' beats '+playerChoice;
-    }
-    else if(playerChoice=='paper' && computerChoice=='paper'){
-        return 'game draw';
-    }
-
-    else if(playerChoice=='scissor' && computerChoice=='rock'){
-        return 'You Lose! '+computerChoice+' beats '+playerChoice;
-    }
-    else if(playerChoice=='scissor' && computerChoice=='paper'){
-        return 'you won! '+playerChoice+' beats '+computerChoice;
-    }
-    else if(playerChoice=='scissor' && computerChoice=='scissor'){
-        return 'game draw';
+    else if(
+        (playerChoice == 'rock' && computerChoice == 'scissor') ||
+        (playerChoice == 'paper' && computerChoice == 'rock') ||
+        (playerChoice == 'scissor' && computerChoice == 'paper')
+        ){
+            return 'You Won! '+ playerChoice + ' beats ' + computerChoice;
+        }
+    else{
+        return 'You Lose! '+ computerChoice + ' beats ' + playerChoice;
     }
 }
 
