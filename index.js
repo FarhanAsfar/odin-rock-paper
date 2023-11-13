@@ -8,7 +8,7 @@ function getComputerChoice(){
 }
 
 function playRound(playerChoice, computerChoice){
-    
+
     if(playerChoice == computerChoice){
         return 'Game Drawn';
     }
@@ -17,10 +17,10 @@ function playRound(playerChoice, computerChoice){
         (playerChoice == 'paper' && computerChoice == 'rock') ||
         (playerChoice == 'scissor' && computerChoice == 'paper')
         ){
-            return 'You Won! '+ playerChoice + ' beats ' + computerChoice;
+            return 'You Won! '+ playerChoice + ' defeats ' + computerChoice;
         }
     else{
-        return 'You Lose! '+ computerChoice + ' beats ' + playerChoice;
+        return 'You Lose! '+ computerChoice + ' defeats ' + playerChoice;
     }
 }
 
