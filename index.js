@@ -8,6 +8,8 @@ function getComputerChoice(){
 }
 
 function playRound(playerChoice, computerChoice){
+    playerChoice = playerChoice.toUpperCase();
+    computerChoice = computerChoice.toUpperCase();
 
     if(playerChoice == computerChoice){
         return 'Game Drawn';
@@ -28,5 +30,6 @@ function playRound(playerChoice, computerChoice){
 
 const playerChoice = 'scissor';
 const computerChoice = getComputerChoice();
+
 
 console.log(playRound(playerChoice, computerChoice));
