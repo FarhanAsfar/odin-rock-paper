@@ -8,8 +8,8 @@ function getComputerChoice(){
 }
 
 function playRound(playerChoice, computerChoice){
-    playerChoice = playerChoice.toUpperCase();
-    computerChoice = computerChoice.toUpperCase();
+    playerChoice = playerChoice.toLowerCase();
+    computerChoice = computerChoice.toLowerCase();
 
     if(playerChoice == computerChoice){
         return 'Game Drawn';
@@ -18,9 +18,9 @@ function playRound(playerChoice, computerChoice){
         (playerChoice == 'rock' && computerChoice == 'scissor') ||
         (playerChoice == 'paper' && computerChoice == 'rock') ||
         (playerChoice == 'scissor' && computerChoice == 'paper')
-        ){
-            return 'You Won! '+ playerChoice + ' defeats ' + computerChoice;
-        }
+    ){
+        return 'You Won! '+ playerChoice + ' defeats ' + computerChoice;
+    }
     else{
         return 'You Lose! '+ computerChoice + ' defeats ' + playerChoice;
     }
@@ -28,7 +28,8 @@ function playRound(playerChoice, computerChoice){
 
 
 
-const playerChoice = 'scissor';
+const playerChoice = 'rock';
+//const playerChoice = prompt("Enter your choice: ");
 const computerChoice = getComputerChoice();
 
 
