@@ -25,10 +25,14 @@ function playRound(playerChoice, computerChoice){
 }
 
 
+function game(){
+    for(let i=0;i<5;i++){
+        const playerChoice = 'rock'; 
+        //const playerChoice = prompt("enter your choice: ");
+        const computerChoice = getComputerChoice();
 
-const playerChoice = 'rock';
-//const playerChoice = prompt("Enter your choice: ");
-const computerChoice = getComputerChoice();
+        console.log(playRound(playerChoice, computerChoice));
+    }
+}
 
-
-console.log(playRound(playerChoice, computerChoice));
+game();
