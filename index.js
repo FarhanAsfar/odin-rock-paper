@@ -44,6 +44,14 @@ function game(){
     }
     console.log('Player Wins: '+player);
     console.log('Computer Wins: '+computer);
+
+    if(player>computer){
+        console.log("You Won the Round!");
+    }else if(computer>player){
+        console.log("Computer Won the Round!");
+    }else{
+        console.log("Round Tied");
+    }
 }
 
 game();
