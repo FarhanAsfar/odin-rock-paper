@@ -26,13 +26,24 @@ function playRound(playerChoice, computerChoice){
 
 
 function game(){
+    let player = 0;
+    let computer = 0;
     for(let i=0;i<5;i++){
         const playerChoice = 'rock'; 
         //const playerChoice = prompt("enter your choice: ");
         const computerChoice = getComputerChoice();
 
-        console.log(playRound(playerChoice, computerChoice));
+        const result = (playRound(playerChoice, computerChoice));
+        console.log(result);
+
+        if(result.includes("Won")){
+            player++;
+        }else if(result.includes("Lose")){
+            computer++;
+        }
     }
+    console.log('Player Wins: '+player);
+    console.log('Computer Wins: '+computer);
 }
 
 game();
