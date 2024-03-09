@@ -30,7 +30,7 @@ function game(){
     let computer = 0;
     for(let i=0;i<5;i++){
         //const playerChoice = 'rock'; 
-        const playerChoice = prompt("enter your choice: ");
+        const playerChoice = prompt("Enter your choice(rock, paper, scissor): ");
         const computerChoice = getComputerChoice();
 
         const result = (playRound(playerChoice, computerChoice));
@@ -46,11 +46,11 @@ function game(){
     console.log('Computer Wins: '+computer);
 
     if(player>computer){
-        console.log("You Won the Round!");
+        prompt("You Won the Round!");
     }else if(computer>player){
-        console.log("Computer Won the Round!");
+        prompt("Computer Won the Round!");
     }else{
-        console.log("Round Tied");
+        prompt("Round Tied");
     }
 }
 
