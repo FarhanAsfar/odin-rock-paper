@@ -29,8 +29,8 @@ function game(){
     let player = 0;
     let computer = 0;
     for(let i=0;i<5;i++){
-        const playerChoice = 'rock'; 
-        //const playerChoice = prompt("enter your choice: ");
+        //const playerChoice = 'rock'; 
+        const playerChoice = prompt("enter your choice: ");
         const computerChoice = getComputerChoice();
 
         const result = (playRound(playerChoice, computerChoice));
