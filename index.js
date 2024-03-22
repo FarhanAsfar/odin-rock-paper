@@ -25,33 +25,33 @@ function playRound(playerChoice, computerChoice){
 }
 
 
-function game(){
-    let player = 0;
-    let computer = 0;
-    for(let i=0;i<5;i++){
-        //const playerChoice = 'rock'; 
-        const playerChoice = prompt("Enter your choice(rock, paper, scissor): ");
-        const computerChoice = getComputerChoice();
+// function game(){
+//     let player = 0;
+//     let computer = 0;
+//     for(let i=0;i<5;i++){
+//         //const playerChoice = 'rock'; 
+//         //const playerChoice = prompt("Enter your choice(rock, paper, scissor): ");
+//         const computerChoice = getComputerChoice();
 
-        const result = (playRound(playerChoice, computerChoice));
-        console.log(result);
+//         const result = (playRound(playerChoice, computerChoice));
+//         console.log(result);
 
-        if(result.includes("Won")){
-            player++;
-        }else if(result.includes("Lose")){
-            computer++;
-        }
-    }
-    console.log('Player Wins: '+player);
-    console.log('Computer Wins: '+computer);
+//         if(result.includes("Won")){
+//             player++;
+//         }else if(result.includes("Lose")){
+//             computer++;
+//         }
+//     }
+//     console.log('Player Wins: '+player);
+//     console.log('Computer Wins: '+computer);
 
-    if(player>computer){
-        prompt("You Won the Round!");
-    }else if(computer>player){
-        prompt("Computer Won the Round!");
-    }else{
-        prompt("Round Tied");
-    }
-}
+//     if(player>computer){
+//         prompt("You Won the Round!");
+//     }else if(computer>player){
+//         prompt("Computer Won the Round!");
+//     }else{
+//         prompt("Round Tied");
+//     }
+// }
 
-game();
+// game();
