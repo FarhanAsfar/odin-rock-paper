@@ -5,22 +5,35 @@ function getComputerChoice(){
     return choices[randomIndex];
 }
 
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) =>{
+    button.addEventListener('click', handleButtonClick);
+});
+
+function handleButtonClick(event){
+    const buttonName = event.target.textContent; //retrieve the clicked button name.
+    console.log("clicked: ", buttonName);
+
+    const computerChoice = getComputerChoice();
+    playRound(buttonName, computerChoice);
+}
+
 function playRound(playerChoice, computerChoice){
     playerChoice = playerChoice.toLowerCase();
     computerChoice = computerChoice.toLowerCase();
 
     if(playerChoice == computerChoice){
-        return 'Game Drawn';
+        console.log('Game Drawn');
     }
     else if(
         (playerChoice == 'rock' && computerChoice == 'scissor') ||
         (playerChoice == 'paper' && computerChoice == 'rock') ||
         (playerChoice == 'scissor' && computerChoice == 'paper')
     ){
-        return 'You Won! '+ playerChoice + ' defeats ' + computerChoice;
+        console.log('You Won! '+ playerChoice + ' defeats ' + computerChoice);
     }
     else{
-        return 'You Lose! '+ computerChoice + ' defeats ' + playerChoice;
+        console.log('You Lose! '+ computerChoice + ' defeats ' + playerChoice);
     }
 }
 
