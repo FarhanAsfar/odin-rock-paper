@@ -14,8 +14,15 @@ function handleButtonClick(event){
     const buttonName = event.target.textContent; //retrieve the clicked button name.
     console.log("You chose: ", buttonName);
 
+    const playerChoiceElement = document.getElementById('playerChoice');
+    playerChoiceElement.textContent = "You chose: "+buttonName; //showing player choice on html page
+
     const computerChoice = getComputerChoice();
     console.log("Computer chose: ", computerChoice);
+
+    const computerChoiceElement = document.getElementById('computerChoice');
+    computerChoiceElement.textContent = "Computer chose: "+computerChoice;
+
     playRound(buttonName, computerChoice);
 }
 
