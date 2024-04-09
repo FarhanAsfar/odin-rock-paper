@@ -30,8 +30,12 @@ function playRound(playerChoice, computerChoice){
     playerChoice = playerChoice.toLowerCase();
     computerChoice = computerChoice.toLowerCase();
 
+    const showResult = document.getElementById('result');
+
     if(playerChoice == computerChoice){
-        console.log('Game Drawn');
+        console.log('Draw');
+
+        showResult.textContent = "Draw";
     }
     else if(
         (playerChoice == 'rock' && computerChoice == 'scissor') ||
@@ -39,9 +43,13 @@ function playRound(playerChoice, computerChoice){
         (playerChoice == 'scissor' && computerChoice == 'paper')
     ){
         console.log('You Won! '+ playerChoice + ' defeats ' + computerChoice);
+
+        showResult.textContent = "You Won! "+ playerChoice + " defeats " + computerChoice;
     }
     else{
         console.log('You Lose! '+ computerChoice + ' defeats ' + playerChoice);
+
+        showResult.textContent = "You Lose! "+ computerChoice + " defeats " + playerChoice;
     }
 }
 
