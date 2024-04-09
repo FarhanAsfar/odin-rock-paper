@@ -12,9 +12,10 @@ buttons.forEach((button) =>{
 
 function handleButtonClick(event){
     const buttonName = event.target.textContent; //retrieve the clicked button name.
-    console.log("clicked: ", buttonName);
+    console.log("You chose: ", buttonName);
 
     const computerChoice = getComputerChoice();
+    console.log("Computer chose: ", computerChoice);
     playRound(buttonName, computerChoice);
 }
 
